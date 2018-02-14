@@ -16,3 +16,9 @@ https://www.cs.rochester.edu/~gildea/2018_Spring/hw.shtml
 Instructions
 https://www.cs.rochester.edu/~gildea/2018_Spring/perceptron_assignment_description.txt
 ```
+
+## Project-2 (SGD for SVM)
+```
+Instructions
+https://www.cs.rochester.edu/~gildea/2018_Spring/hw3_instruction.txt
+```
