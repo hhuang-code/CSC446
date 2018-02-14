@@ -1,0 +1,36 @@
+Name: Hao Huang
+Email: hhuang40@ur.rochester.edu
+Course: CSC446
+
+Homework:
+Implement perceptron for the adult income dataset using Python. Data available in /u/cs246/data/adult. Experiment with performance as a function of number of iterations.
+
+************ Files *********
+Huang_Hao_hw3.py: Implementing SGD for SVM for the adult income dataset. It contains three core functions: data loading, training and testing. Learning rate is set to 0.1 by default.
+
+plot.py: plot the function of accuracy on dev and test dataset w.r.t the capacity parameter. The epochs and learning rate are set to 5 and 0.1, respectively.
+
+plot.png: a visualization of result of plot.py
+
+************ Algorithm *****
+1. Read in data into a matrix whose the first column is set to 1 as dummy features.
+2. During training process, for each epoch, train samples sequentially.
+3. For each training sample, update weights and bias according to equation (13) on pp. 20 of the lecture note.
+4. After training, test the model on dev and test dataset.
+
+************ Instructions ***
+1. To run SGD on SVM, enter into the folder containing Huang_Hao_hw3.py, and type "./Huang_Hao_hw3.py --epochs k --capacity c", where k and c should be replaced with concrete numbers respectively. Note: there is a little difference between the result and the example about the last few digits. I think it is due to float precision.
+
+2. To plot the function of accuracy w.r.t capacity, type "./plot.py". Epochs is set to 5 by default. No CLI options are needed. 20 points are plotted. If you use ssh to login cycle machines, please use "ssh -X" in order to see the plot. 
+
+************ Results *******
+1. When epochs is fixed, the accuracy on both dev and test dataset increases as the capacity increases. When the capacity increases to 0.1, the accuracy reaches highest. Then as the capacity continues to increase, the accuracy begins to decrease. When the capacity is larger than 10, the accuracy begins to jump up and down dramatically.
+2. When capacity is fixed, the accuracy on both dev and test dataset won't increase even if the epochs increases. The accuracy only fluctuate very slightly.
+
+************ Your interpretation **** (Attention: important!)
+1. The capacity is very important for the final accuracy. There is a best choice for this argument (0.1 for this dataset). The accuracy is a monotone-increasing function of capacity when capacity is less than 0.1. When capacity is larger than 0.1, the accuracy will decrease.
+2. For this dataset, epochs is not important. 1 epoch is enough to yield a good accuracy. Increasing epoch has no significant impact on accuracy. It might be due to the small size of this dataset.
+
+************ References ************
+1. Lecture note: https://www.cs.rochester.edu/~gildea/2018_Spring/notes.pdf
+2. Person who I discussed with: Jun Liang
