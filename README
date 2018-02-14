@@ -1,0 +1,9 @@
+1. How to run
+Open a terminal and enter into the folder containing Huang_perceptron.py, type "./Huang_perceptron.py --nodev --iterations [int]". For instance, "./Huang_perceptron.py --nodev --iterations 1"
+
+2. To check the experiment of the function between #iteractions and accuracy, just remove "--nodev" argument.
+
+3. Please note that:
+(1). "--iterations" argument is a must. "--lr" is an optional. If "--iterations" is omitted, it will use 20 by default. If "--lr" is omitted, it will use 1 by default.
+(2). In order to show the plot, please use "ssh -X " to login into the cycle machine. And iterations should be larger than 1 (Because drawing a single point is meaningless).
+(3). The key code is in "train()" function. The figure is an example of iterations = 20.
