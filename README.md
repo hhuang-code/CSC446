@@ -22,3 +22,14 @@ https://www.cs.rochester.edu/~gildea/2018_Spring/perceptron_assignment_descripti
 Instructions
 https://www.cs.rochester.edu/~gildea/2018_Spring/hw3_instruction.txt
 ```
+## Project-3 (GMM and EM)
+```
+Instructions
+https://www.cs.rochester.edu/~gildea/2018_Spring/hw.shtml (Homework 7)
+```
+
+## Project-4 (EM for HMM)
+```
+Instructions
+https://www.cs.rochester.edu/~gildea/2018_Spring/hw.shtml (Homework 8)
+```
