@@ -1,0 +1,26 @@
+Name: Hao Huang
+Email: hhuang40@ur.rochester.edu
+Course: CSC446
+
+Homework:
+Implement EM fitting of a mixture of gaussians on the two-dimensional data set points.dat. You should try different numbers of mixtures, as well as tied vs. separate covariance matrices for each gaussian.
+Use the final 1/10 of the data for dev. Plot likelihood on train and dev vs iteration for different numbers of mixtures.
+
+************ Files ************
+Huang_Hao_hw7.py: Implementing EM algorithm for mixuture Gaussians. It contains three core functions: load_data, prob (computing Gaussian pdf) and em (compute EM).
+
+plot.py: plot log likelyhood for both train and dev set, under different number of Gaussians.
+
+figure.png: a visualization of result of plot.py
+
+************ Instructions ************
+To run EM, enter into the folder containing Huang_Hao_hw7.py, and type "./Huang_Hao_hw7.py". If you use ssh to login cycle machines, please use "ssh -X" in order to see the plot. 
+Note: If you meet the problem "LinAlgError("singular matrix")", please re-run it.
+
+************ Results and Interpretation************
+1. The default number of iterations is 300. The number of Gaussians is: 3, 6, 12, 25, 50.
+2. The log likelyhood in train set is monotonic increasing, but this is not always true for dev set.
+3. When the number of Gaussians is large, e.g., 50, separated covariance cannot lead to convergence, while tied covariance will convergence. Because unknown variables are too many.
+
+************ References ************
+1. Lecture note: https://www.cs.rochester.edu/~gildea/2018_Spring/notes.pdf
