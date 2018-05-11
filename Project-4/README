@@ -1,0 +1,24 @@
+Name: Hao Huang
+Email: hhuang40@ur.rochester.edu
+Course: CSC446
+
+Homework:
+Implement EM to train an HMM for whichever dataset you used for assignment 7. The observation probs should be as in assignment 7: either gaussian, or two discrete distributions conditionally independent given the hidden state. Does the HMM model the data better than the original non-sequence model? What is the best number of states?
+
+************ Files ************
+Huang_Hao_hw8.py: Implementing EM algorithm for Hidden Markov Model. It contains eight core functions: load_data, Gaussian (computing Gaussian pdf), Initialization (initialize start states), createAlpha, createBeta, Estep, Mstep, and em-hmm (combine Estep and Mstep).
+
+plot.py: plot log likelyhood for both train and dev set, under different number of hidden states.
+
+figure.png: a visualization of result of plot.py
+
+************ Instructions ************
+To run EM for HMM, enter into the folder containing Huang_Hao_hw8.py, and type "./Huang_Hao_hw8.py". If you use ssh to login cycle machines, please use "ssh -X" in order to see the plot. 
+Note: If you meet the problem "LinAlgError("singular matrix")", please re-run it. If you see "nan" output, it means overflow, but it doesn't matter.
+
+************ Results and Interpretation ************
+1. The default number of iterations is 25. The number of Gaussians is: 2, 4, 6, 8.
+2. From the log likelyhood, we can see that the HMM model the data better than the original non-sequence model. And the best number of states is 6.
+
+************ References ************
+1. Lecture note: https://www.cs.rochester.edu/~gildea/2018_Spring/notes.pdf
